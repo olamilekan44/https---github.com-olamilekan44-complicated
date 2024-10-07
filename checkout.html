@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Checkout example</title>
+    <link href="../black-color/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link href="../black-color/assets/bootstrap/form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+  
+  <div class="container">
+    <main>
+      <div class="row g-5">
+        <div class="col-md-7 col-lg-8">
+          <form class="needs-validation gform" action="https://script.google.com/macros/s/AKfycbyfcECV1iC_5Q6zup19vP94o-o2ofdt8A9j-mHnSta7An_xLzZGrM89yUVxT-07BNTXgg/exec" method="post" novalidate>
+            <h4 class="mb-3">Payment</h4>
+            <div class="my-3">
+              <div class="form-check">
+                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" value="Credit" checked required>
+                <label class="form-check-label" for="credit">Credit card</label>
+              </div>
+              <div class="form-check">
+                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" value="Debit" required>
+                <label class="form-check-label" for="debit">Debit card</label>
+              </div>
+            </div>
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" name="ccName" placeholder="" required>
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback">Name on card is required</div>
+              </div>
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" name="ccNumber" placeholder="" required>
+                <div class="invalid-feedback">Credit card number is required</div>
+              </div>
+               <div class="col-md-3">
+                <label for="cc-expiration" class="form-label">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" name="ccExpiration" placeholder="" required>
+                <div class="invalid-feedback">Expiration date required</div>
+              </div>
+              <div class="col-md-3">
+                <label for="cc-cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" name="ccCVV" placeholder="" required>
+                <div class="invalid-feedback">Security code required</div>
+              </div>
+            </div>
+            <hr class="my-4">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="form-validation.js"></script>
+  </body>
+</html>
